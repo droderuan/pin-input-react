@@ -1,6 +1,6 @@
 import React, { useCallback, useRef, useState } from 'react'
 
-interface PinInputProps {
+interface PinInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   length: number
   direction: 'column' | 'row'
   pinComponent: React.FC
@@ -19,7 +19,8 @@ export const PinInput: React.FC<PinInputProps> = ({
   pinComponent: PinComponent,
   pinComponentOnFill: PinComponentOnFill,
   pinComponentOnFocus: PinComponentOnFocus,
-  pinText: PinText
+  pinText: PinText,
+  ...props
 }) => {
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -88,7 +89,7 @@ export const PinInput: React.FC<PinInputProps> = ({
 
   return (
     <div
-      role='button'
+      role='input'
       tabIndex={0}
       onClick={focusInput}
       onKeyDown={focusInput}
@@ -96,11 +97,13 @@ export const PinInput: React.FC<PinInputProps> = ({
         display: 'flex',
         flexDirection: direction,
         cursor: 'text',
-        width: 'fit-content'
+        width: 'fit-content',
+        outline: 'none'
       }}
     >
       <input
         ref={inputRef}
+        {...props}
         onChange={(e) => handleOnChange(e.target.value)}
         maxLength={length}
         style={{
@@ -111,6 +114,7 @@ export const PinInput: React.FC<PinInputProps> = ({
           outline: 'none',
           border: 0
         }}
+        type='password'
         onFocus={onFocus}
         onBlur={onBlur}
       />
