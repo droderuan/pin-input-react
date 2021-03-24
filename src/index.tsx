@@ -1,14 +1,58 @@
 import React, { useCallback, useRef, useState } from 'react'
-
-interface PinInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+/**
+ *  See [here](https://github.com/droderuan/pin-input-react/blob/master/example/src/App.tsx) for a example
+ */
+export interface PinInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  /**
+   *  **Required** \
+   *  How many pin input will have.
+   */
   length: number
+
+  /**
+   *  **Required** \
+   *  Direction of the pins.
+   */
   direction: 'column' | 'row'
+
+  /**
+   *  **Required** \
+   *  Default component for each pin position.
+   */
   pinComponent: React.FC
+
+  /**
+   *  **Optional** \
+   *  Component for when the pin is focused.
+   */
   pinComponentOnFocus?: React.FC
+
+  /**
+   * **Optional** \
+   * Component to be used when the pin is filled. If `showValues` is True, this componet needs to render his children.
+   */
   pinComponentOnFill?: React.FC
-  pinText?: React.FC
-  onChangePin?: (values: string) => void
+
+  /**
+   *  **Optional** \
+   *  Show the values of pin. \
+   *  See [here](https://github.com/droderuan/pin-input-react/blob/master/example/src/App.tsx) for a example.
+   */
   showValues?: boolean
+
+  /**
+   *  **Optional** \
+   *  Component to be used when the `showValues` is True. This component needs to render his children. \
+   *  See [here](https://github.com/droderuan/pin-input-react/blob/master/example/src/App.tsx) for a example.
+   */
+  pinText?: React.FC
+
+  /**
+   *  **Optional** \
+   *  Callback to be used into the `onChange` of the input.
+   */
+  onChangePin?: (values: string) => void
 }
 
 export const PinInput: React.FC<PinInputProps> = ({

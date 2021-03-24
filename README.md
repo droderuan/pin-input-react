@@ -29,16 +29,16 @@ If you set showValues, make sure the **`pinComponentOnFocus`** get his chield, b
 
 ## Properties
 
-| name                | type              | description                                         | is required |   |
-|---------------------|-------------------|-----------------------------------------------------|-------------|---|
-| length              | number            | length of the input                                 | yes         |   |
-| direction           | `row` or `column` | the direction of the pins                           | yes         |   |
-| pinComponent        | `React.FC`        | A component for default pin                         | yes         |   |
-| pinComponentOnFocus | `React.FC`        | A component for when the pin is focused             | no          |   |
-| pinComponentOnFill  | `React.FC`        | A component for when the pin is filled              | no          |   |
-| onChangePin         | Callback          | Used for onChange from input                        | no          |   |
-| ShowValues          | boolean           | If want to show the values when filled              | no          |   |
-| pinText             | `React.FC`        | Used to show values inside the `pinComponentOnFill` | no          |   |
+| name                | type              | description                                         | is required |
+|---------------------|-------------------|-----------------------------------------------------|-------------|
+| length              | number            | length of the input                                 | yes         |
+| direction           | `row` or `column` | the direction of the pins                           | yes         |
+| pinComponent        | `React.FC`        | A component for default pin                         | yes         |
+| pinComponentOnFocus | `React.FC`        | A component for when the pin is focused             | no          |
+| pinComponentOnFill  | `React.FC`        | A component for when the pin is filled              | no          |
+| onChangePin         | Callback          | Used for onChange from input                        | no          |
+| ShowValues          | boolean           | If want to show the values when filled              | no          |
+| pinText             | `React.FC`        | Used to show values inside the `pinComponentOnFill` | no          |
 
 ## License
 
