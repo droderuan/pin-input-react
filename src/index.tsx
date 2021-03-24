@@ -51,6 +51,7 @@ export interface PinInputProps
   /**
    *  **Optional** \
    *  Callback to be used into the `onChange` of the input.
+   * @param values The callback must receive the values from input
    */
   onChangePin?: (values: string) => void
 }
