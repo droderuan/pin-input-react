@@ -6,6 +6,8 @@
 
 The `pin-input-react` is a react component to be used when you want a pin component. This component is being develop to be very generic to attend many user cases as possible.
 
+[Live demonstration](https://droderuan.github.io/pin-input-react/)
+
 ## Install
 
 **The package is unpublished**
