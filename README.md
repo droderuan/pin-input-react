@@ -25,7 +25,7 @@ the component accepts 3 other component:
 * pinComponentOnFocus - is used when the pin position is focused
 * pinComponentOnFill - is used when the pin position has a value
 
-If you set showValues, make sure the **`pinComponentOnFocus`** get his chield, becaused it will be used to insert the content. The same to pinText, which is used to receive the values. Any questions, [here](./example/src/App.tsx) show a implementation.
+If you set showValues, make sure the **`pinComponentOnFocus`** get his chield, because it will be used to insert the pinText. The same to pinText, which is used to show the pin values. Any questions, [here](./example/src/App.tsx) show a implementation.
 
 ## Properties
 
