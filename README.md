@@ -10,8 +10,6 @@ The `pin-input-react` is a react component to be used when you want a pin compon
 
 ## Install
 
-**The package is unpublished**
-
 ```bash
 npm install --save pin-input-react
 
